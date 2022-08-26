@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掘金-详情页</title>
+    <link id="favicon" rel="shortcut icon" href="./img/logoicon.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_3269601_io38uu0b0u.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #c8caca;
+        }
+
+        .main {
+            background-color: #c8caca;
+            position: relative;
+            min-height: 7000px;
+            padding: 10px;
+            width: 90%;
+            box-sizing: border-box;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        /******************/
+        .main-l h1 {
+            margin: 30px 0;
+            font-weight: 600;
+            color: #252933;
+        }
+
+        .main-l {
+            margin: 10px;
+            min-width: 999px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding-left: 30px;
+        }
+
+        .advert-top-tou img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .main-ship {
+            color: #666;
+            padding: 1px 23px;
+            margin: 22px 0;
+            height: 50px;
+            line-height: 50px;
+            width: 93%;
+            border-left: 4px solid #cbcbcb;
+            background-color: #f8f8f8;
+        }
+
+        .main-ship a {
+            text-decoration: none;
+            color: #0269c8;
+            border-bottom: 1px solid #d1e9ff;
+        }
+
+
+        h2 {
+            padding-bottom: 12px;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .main-r {
+            margin: 10px;
+            width: 300px;
+            background-color: #c8caca;
+            border-radius: 5px;
+        }
+
+
+        /***************右侧个人信息*************************************/
+
+
+        .advert-top {
+            background-color: #fff;
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .advert-top .tou img {
+            border-radius: 50%;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        .advert-top-tou {
+            height: 70px;
+            display: flex;
+            vertical-align: middle;
+            vertical-align: middle;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid #e4e6eb;
+            cursor: pointer;
+        }
+
+        .author-b-1-1 {
+            color: #252933;
+            font-weight: 500;
+        }
+
+        .advert-dow {
+            background-color: #fff;
+            width: 300px;
+            height: 90px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .advert-dow img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .advert-xia .advert-chahao {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            display: none;
+        }
+
+        .advert-xia:hover .advert-chahao {
+            display: block;
+            opacity: 0.5;
+        }
+
+        .xgwz {
+            background-color: #fff;
+            width: 300px;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        .block-body:hover a {
+            color: #007fff;
+        }
+
+        .xgwz-1 {
+            padding: 16px 0;
+            margin: 0 20px;
+            font-size: 16px;
+            line-height: 2rem;
+            color: #1d2129;
+            font-weight: 600;
+            border-bottom: 1px solid #e4e6eb;
+        }
+
+        .entry-list {
+            line-height: 22px;
+            height: 22px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #252933;
+            margin: 0 20px;
+            padding: 16px 0;
+            cursor: pointer;
+        }
+
+        .entry-meta-box {
+            display: flex;
+            margin-top: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #8a919f;
+        }
+
+        /***************右侧目录*************************/
+        .mulu {
+            background-color: #fff;
+            width: 300px;
+            height: 500px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .mulu-ul {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .mulu-ul li {
+            height: 44px;
+            line-height: 44px;
+            margin-top: 8px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .mulu-ul a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .mulu-ul li:hover {
+            background-color: rgba(104, 104, 104, 0.5);
+        }
+
+        /**************mulu目录滚动 固定定位fixed******************/
+        .fixed {
+            position: fixed;
+            top: 10px;
+            /* right: 115px; */
+            transition: 1s;
+        }
+
+        /* header区域 ----------------------------------*/
+        #body-header {
+            height: 68px;
+            min-width: 600px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgba(141, 141, 141, 0.3)
+        }
+
+        /* 图标 */
+        .header-logo {
+            float: left;
+            margin: 22px 0 0 60px;
+            cursor: pointer;
+        }
+
+        #header-logo {
+            width: 106px;
+        }
+
+        /* 图标旁边列表 */
+        .header-list li {
+            height: 43px;
+            margin: 24px 0 0 25px;
+            float: left;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .disappearSecond:hover {
+            border-bottom: 3px solid rgb(30, 143, 255);
+            box-sizing: border-box;
+            color: #696d70;
+        }
+
+        /* 首页下拉列表 */
+        .header-list-lis {
+            position: absolute;
+            left: 133px;
+            top: 50px;
+            width: 150px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 20px 0 #cfd1d4;
+            z-index: 5;
+        }
+
+        .header-list-lis ul {
+            margin: 10px 58px;
+        }
+
+        .header-list-lis li {
+            height: 41px;
+            width: 32px;
+            padding: 2px;
+            font-size: 16px;
+            border-bottom: 3px solid rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .header-list-lis li:hover {
+            border-bottom: 3px solid rgb(30, 143, 255);
+
+        }
+
+        .header-list-lis-arrow {
+            display: none;
+            position: absolute;
+            top: 28px;
+            left: 203px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* 登录框按钮 */
+        .header-login button {
+            float: right;
+            width: 65px;
+            height: 36px;
+            margin: 17px 65px 0 0;
+            border: 1px solid rgba(30, 128, 255, .3);
+            border-radius: 5px;
+            background-color: rgba(30, 128, 255, .05);
+            color: rgb(30, 143, 255);
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            cursor: pointer;
+        }
+
+        .header-login button:hover {
+            border: 1px solid rgba(30, 128, 255, .8);
+            background-color: rgba(28, 108, 211, 0.1);
+        }
+
+        /* 会员 */
+        .header-vip {
+            float: right;
+            margin: 22px 25px 0 0;
+            cursor: pointer;
+        }
+
+        .header-vip #header-vip {
+            float: right;
+            margin: 8px 0 0 5px;
+            color: #86909c;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 10px;
+        }
+
+        /* 创作者中心 */
+        .header-creation {
+            float: left;
+        }
+
+        .header-creation button {
+            float: left;
+            height: 38px;
+            background-color: rgb(30, 128, 255);
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            cursor: pointer;
+        }
+
+        #header-creation-rightBtn {
+            width: 30px;
+            margin: 15px 0 0 0;
+            border-left: 1px solid hsla(0, 0%, 100%, 0.5);
+            border-radius: 0 3px 3px 0;
+        }
+
+        #header-creation-leftBtn {
+            width: 100px;
+            margin: 15px 0 0 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .header-creation button:hover {
+            background-color: rgb(17, 113, 238);
+        }
+
+        /* 创作者中心下拉列表 */
+        .header-creation-list {
+            position: absolute;
+            right: 245px;
+            top: 60px;
+            height: 140px;
+            width: 135px;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 20px 0 #cfd1d4;
+            z-index: 5;
+        }
+
+        .header-creation-list ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .header-creation-list li {
+            width: 110px;
+            height: 30px;
+            text-align: left;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .header-creation-list li:hover {
+            background-color: rgb(249, 249, 249);
+        }
+
+        /* 搜索框 */
+        .header-search {
+            float: left;
+            margin: 17px 30px 0 0;
+            border: 1px solid #c2c8d1;
+            border-radius: 5px;
+        }
+
+        #header-search-btn {
+            float: left;
+            height: 30px;
+            width: 50px;
+            margin: 2px;
+            background-color: rgb(242, 243, 245);
+            border-radius: 3px;
+            border: none;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .header-search input {
+            float: left;
+            height: 26px;
+            width: 300px;
+            margin: 4px 0 4px 15px;
+            border: none;
+            outline: none;
+            transition: width 0.3s ease;
+            font-size: 14px;
+        }
+
+        .moveFather {
+            float: right;
+            margin-right: 30px;
+            width: 535px;
+            height: 56px;
+            overflow: hidden;
+        }
+
+        .moveChild {
+            float: left;
+            width: 1000px;
+        }
+
+
+
+        /* 响应式 */
+        @media screen and (max-width:1520px) {
+            .header-logo {
+                margin: 22px 0 0 30px;
+            }
+
+            .header-login button {
+                margin: 17px 40px 0 0;
+            }
+
+            .header-creation-list {
+                right: 220px;
+            }
+        }
+
+        @media screen and (max-width:1360px) {
+            .header-search input {
+                width: 150px !important;
+            }
+
+            .moveFather {
+                width: 385px;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .header-search input {
+                width: 225px !important;
+            }
+
+            .moveFather {
+                width: 460px;
+            }
+
+            .disappearFirst {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .header-list-lis {
+                display: none !important;
+            }
+        }
+
+        @media screen and (max-width:1180px) {
+            .header-list-lis-arrow {
+                display: block;
+            }
+
+            .disappearSecond {
+                display: none;
+            }
+
+            .header-list li {
+                font-size: 18px;
+                margin: 21px 0 0 25px;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .header-creation {
+                display: none;
+            }
+
+            .header-creation-list {
+                display: none !important;
+            }
+
+            .moveFather {
+                width: 300px;
+            }
+
+            .header-search {
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            #header-vip {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            .header-vip img {
+                display: none;
+            }
+
+            .moveFather {
+                margin: 0px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .header-search input {
+                width: 150px !important;
+            }
+
+            .moveFather {
+                width: 225px
+            }
+        }
+
+        /**********************************/
+        .suspension-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            z-index: 1000;
+        }
+
+        .to-top-btn {
+            width: 40px;
+            height: 40px;
+            line-height: 1;
+            background-color: #fff;
+            border: 1px solid #f1f1f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #0080ff;
+        }
+
+        .icon-tubiao02 {
+            color: #909090;
+        }
+
+        .btn1 {
+            display: none;
+        }
+
+        .actived {
+            color: #007fff;
+            border-left: 3px solid #007fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!---------顶部导航-------->
+    <header id="body-header">
+        <!-- 图标 -->
+        <div class="header-logo">
+            <img src="./img/1.logo.svg" alt="" id="header-logo">
+        </div>
+        <!-- 图标旁边列表 -->
+        <div class="header-list">
+            <ul style="list-style: none;">
+                <li class="disappearSecond" style="color: #007fff;"><a>首页</a></li>
+                <li class="disappearSecond"><a>沸点</a></li>
+                <li class="disappearSecond" style="position: relative;">
+                    <a>课程</a>
+                    <div class="shangxin"
+                        style="position: absolute; top: -15px; right: -10px; font-size: 12px; color:#fff; background-color: #ee502f; border-radius: 10px;">
+                        上新</div>
+                </li>
+                <li class="disappearSecond"><a>直播</a></li>
+                <li class="disappearSecond"><a>活动</a></li>
+                <li class="disappearFirst"><a>商城</a></li>
+                <li class="disappearFirst"><a>APP</a></li>
+                <li class="disappearFirst"><a>插件</a></li>
+            </ul>
+        </div>
+        <!-- 首页下拉列表 -->
+        <div class="header-list-lis" style="display: none;">
+            <ul>
+                <li><a>首页</a></li>
+                <li><a>沸点</a></li>
+                <li><a>课程</a></li>
+                <li><a>直播</a></li>
+                <li><a>活动</a></li>
+                <li><a>商城</a></li>
+            </ul>
+        </div>
+        <div class="iconfont icon-down_s header-list-lis-arrow" style="color: rgb(113, 119, 124);"></div>
+        <!-- 登录框按钮 -->
+        <div class="header-login">
+            <button>登录</button>
+        </div>
+        <!-- 会员 -->
+        <div class="header-vip">
+            <img src="./img/2.vip.svg" alt="">
+            <div id="header-vip">会员</div>
+        </div>
+        <!-- 创作者中心下拉列表 -->
+        <div class="header-creation-list" style="display:none; z-index: 100;">
+            <ul style="list-style: none;">
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/a0c8073862f04c2925249fd397763fd3.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;写文章</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e5381c85b5939d984a4b0c0edf102122.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;发沸点</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/a547852cf8e252e15f59b5a765d77d4b.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;写代码</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/6ed78c4e98d68a142e3814b295189480.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;草稿箱</li>
+                </div>
+            </ul>
+        </div>
+        <!-- move盒子包含创作者中心和搜索框 -->
+        <div class="moveFather">
+            <div class="moveChild">
+                <!-- 搜索框 -->
+                <form class="header-search" style="border: 1px solid rgb(194, 200, 209);">
+                    <input type="text" placeholder="探索稀土掘金" style="width: 300px;">
+                    <button id="header-search-btn"
+                        style="color: rgb(105, 109, 112); background-color: rgb(242, 243, 245);">
+                        <i class="iconfont icon-sousuo"></i>
+                    </button>
+                </form>
+                <!-- 创作者中心 -->
+                <div class="header-creation">
+                    <button id="header-creation-leftBtn">创作者中心</button>
+                    <button id="header-creation-rightBtn" class="iconfont icon-down_s">⯆</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./js/header.js"></script>
+    <div class="main">
+        <div class="main-l">
+            <h1>
+                给蚂蚁金服antv提个PR, 以为是改个错别字, 未曾想背后的原因竟如此复杂!
+            </h1>
+            <div style="display: flex;justify-content: space-between; align-items: center;">
+                <div class="advert-top-tou">
+                    <div class="tou"><img
+                            src="https://p6-passport.byteacctimg.com/img/user-avatar/de262bce69b6747c689ee4c579430b78~300x300.image"
+                            alt="" width="50" height="50"></div>
+                    <div class="author-b-1-1">前夕
+                        <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/lv-3.7938ebc.png"
+                            alt="" width="35" height="16" title="创作等级">
+                        <p style="margin-top: 4px;
+                    color: #515767;
+                    font-weight: 400;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;">2022年08月22日 16:27 · 阅读 7558</p>
+                    </div>
+                </div>
+                <div><button style="padding: 0 12px;
+                height: 34px;
+                width: 70px; border-radius: 6px;
+                font-size: 14px;
+                color: #1e80ff; border: 1px solid #2a6dbe;">+ 关注</button></div>
+            </div>
+
+            <br>
+
+            <div class="main-ship">视频版: <a href=""
+                    title="https://link.juejin.cn/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1tt4y1n7KC%3Fvd_source%3D626aa553e41d96c25f58add05b7734c3%23reply126976123072">www.bilibili.com/video/BV1tt…</a>
+            </div>
+            <h2 class="floor box1" id="floor1">前言</h2>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <p>前言</p>
+            <h2 class="floor box2" id="floor2">找到链接错误之处</h2>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <p>找到链接错误之处</p>
+            <h2 class="floor box3" id="floor3">事情好像没这么简单</h2>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <p>事情好像没这么简单</p>
+            <h2 class="floor box4" id="floor4">你以为的真相只是你以为</h2>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <p>你以为的真相只是你以为</p>
+            <h2 class="floor box5" id="floor5">锁定目标精准打击</h2>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <p>锁定目标精准打击</p>
+            <h2 class="floor box6" id="floor6">真正的真相,不得而知</h2>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <p>真正的真相,不得而知</p>
+            <h2 class="floor box7" id="floor7">结语</h2>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <p>结语</p>
+            <h2 class="floor box8" id="floor8">(二更)开源, 比爱情还要神圣</h2>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+            <p>(二更)开源, 比爱情还要神圣</p>
+        </div>
+        <div class="main-r">
+            <div class="advert-top">
+                <div class="advert-top-tou">
+                    <div class="tou"><img
+                            src="https://p6-passport.byteacctimg.com/img/user-avatar/de262bce69b6747c689ee4c579430b78~300x300.image"
+                            alt="" width="50" height="50"></div>
+                    <div class="author-b-1-1">前夕
+                        <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/lv-3.7938ebc.png"
+                            alt="" width="35" height="16" title="创作等级">
+                        <p style="margin-top: 4px;
+                        color: #515767;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;">搬砖的 @ 轻流</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="display:flex;" style="margin-left: 20px
+                    ;">
+                        <br>
+                        <div> <i class="iconfont icon-icon"></i><span>&nbsp;获得点赞&nbsp;230</span></div>
+                        <br>
+                        <div><i class="iconfont icon-xianshikejian"></i><span>&nbsp;文章被阅读&nbsp;9,927</span></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="advert-dow">
+                <div><img src="./img/广告3二维码.png" alt=""></div>
+                <div class="advert-dow-txt">
+                    <p>下载稀土掘金APP</p>
+                    <span>一个帮助开发者成长的社区</span>
+                </div>
+            </div>
+            <br>
+            <div class="advert-xia" style="position: relative; cursor: pointer;"><img
+                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/default.640d9a7.png" alt=""
+                    width="300" height="249">
+                <div class="advert-chahao">✖</div>
+            </div>
+            <br>
+            <div class="xgwz">
+                <div class="xgwz-1">相关文章</div>
+                <div class="block-body">
+                    <div class="entry-list">
+                        <a title="使用antv/G2生态半年有感" class="item">使用antv/G2生态半年有感</a>
+                        <div class="entry-meta-box">
+                            <div class="entry-meta">15点赞</div>
+                            <div class="entry-meta">
+                                &nbsp;·&nbsp;</div>
+                            <div class="entry-meta">17评论</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="mulu">
+                <div class="xgwz-1">目录</div>
+                <div>
+                    <ul class="mulu-ul">
+                        <li class="actived"><a href="#floor1" title="前言">
+                                前言
+                            </a></li>
+                        <li><a href="#floor2" title="找到链接错误之处">
+                                找到链接错误之处</li>
+                        </a>
+                        <li><a href="#floor3" title="事情好像没这么简单">
+                                事情好像没这么简单
+                            </a></li>
+                        <li><a href="#floor4" title="你以为的真相只是你以为">
+                                你以为的真相只是你以为
+                            </a></li>
+                        <li><a href="#floor5" title="锁定目标精准打击">锁定目标精准打击
+                            </a></li>
+                        <li><a href="#floor6" title="真正的真相,不得而知">真正的真相,不得而知
+                            </a></li>
+                        <li><a href="#floor7" title="结语">
+                                结语
+                            </a></li>
+                        <li><a href="#floor8" title="(二更)开源, 比爱情还要神圣">(二更)开源, 比爱情还要神圣
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右下角反馈建议 suspension-panel悬挂板--->
+    <div class="suspension-panel">
+        <button title="回到顶部" class="btn1 to-top-btn">
+            <i class="iconfont icon-tubiao02"></i>
+        </button>
+        <br>
+        <button title="建议反馈" class="btn2 to-top-btn">
+            <i class="iconfont icon-xiaoxi"></i>
+        </button>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(".mulu-ul li").click(function () {
+            $(this).addClass("actived").siblings().removeClass("actived")
+        })
+    </script>
+    <script>
+        //右下角反馈建议 suspension-panel悬挂板  滚动1000px的时候出现隐藏
+        var btn1 = document.querySelector('.btn1')
+        console.log(btn1);
+        window.addEventListener('scroll', function () {
+            var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            y = Math.ceil(y)
+            if (y >= 1000) {
+                btn1.style.display = 'block'
+            }
+            else {
+                btn1.style.display = 'none'
+            }
+        })
+        //回到顶部
+        btn1.addEventListener('click', function () {
+            var timer = setInterval(function () {
+                if (document.documentElement.scrollTop == 0) {
+                    clearInterval(timer) // 页面垂直滚动距离为0.说明到顶了,清除定时器
+                }
+                document.documentElement.scrollTop = document.documentElement.scrollTop - 20
+            }, 10)
+        })
+        //右侧广告 滚动2000px的时候固定定位
+        var mulu = document.querySelector('.mulu')
+        console.log(mulu.scrollX);
+        window.addEventListener('scroll', function () {
+            var y1 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            y1 = Math.ceil(y1)
+            if (y1 >= 888) {
+                mulu.classList.add('fixed')
+            }
+            else {
+                mulu.classList.remove('fixed')
+            }
+        })
+    </script>
+</body>
+
+</html>

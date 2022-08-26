@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掘金-首页</title>
+    <link id="favicon" rel="shortcut icon" href="./img/logoicon.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_3269601_io38uu0b0u.css">
+    <link rel="stylesheet" href="./css/规范化normalize.css">
+    <link rel="stylesheet" href="./css/zhuye.css">
+</head>
+
+<body>
+    <!---------顶部导航-------->
+    <header id="body-header">
+        <!-- 图标 -->
+        <div class="header-logo">
+            <img src="./img/1.logo.svg" alt="" id="header-logo">
+        </div>
+        <!-- 图标旁边列表 -->
+        <div class="header-list">
+            <ul style="list-style: none;">
+                <li class="disappearSecond" style="color: #007fff;"><a>首页</a></li>
+                <li class="disappearSecond"><a>沸点</a></li>
+                <li class="disappearSecond" style="position: relative;">
+                    <a>课程</a>
+                    <div class="shangxin"
+                        style="position: absolute; top: -15px; right: -10px; font-size: 12px; color:#fff; background-color: #ee502f; border-radius: 10px;">
+                        上新</div>
+                </li>
+                <li class="disappearSecond"><a>直播</a></li>
+                <li class="disappearSecond"><a>活动</a></li>
+                <li class="disappearFirst"><a>商城</a></li>
+                <li class="disappearFirst"><a>APP</a></li>
+                <li class="disappearFirst"><a>插件</a></li>
+            </ul>
+        </div>
+        <!-- 首页下拉列表 -->
+        <div class="header-list-lis" style="display: none;">
+            <ul>
+                <li><a>首页</a></li>
+                <li><a>沸点</a></li>
+                <li><a>课程</a></li>
+                <li><a>直播</a></li>
+                <li><a>活动</a></li>
+                <li><a>商城</a></li>
+            </ul>
+        </div>
+        <div class="iconfont icon-down_s header-list-lis-arrow" style="color: rgb(113, 119, 124);"></div>
+        <!-- 登录框按钮 -->
+        <div class="header-login">
+            <button>登录</button>
+        </div>
+        <!-- 会员 -->
+        <div class="header-vip">
+            <img src="./img/2.vip.svg" alt="">
+            <div id="header-vip">会员</div>
+        </div>
+        <!-- 创作者中心下拉列表 -->
+        <div class="header-creation-list" style="display:none; z-index: 100;">
+            <ul style="list-style: none;">
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/a0c8073862f04c2925249fd397763fd3.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;写文章</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e5381c85b5939d984a4b0c0edf102122.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;发沸点</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/a547852cf8e252e15f59b5a765d77d4b.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;写代码</li>
+                </div>
+                <div style="display: flex;"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/6ed78c4e98d68a142e3814b295189480.svg"
+                        alt="">
+                    <li>&nbsp;&nbsp;&nbsp;草稿箱</li>
+                </div>
+            </ul>
+        </div>
+        <!-- move盒子包含创作者中心和搜索框 -->
+        <div class="moveFather">
+            <div class="moveChild">
+                <!-- 搜索框 -->
+                <form class="header-search" style="border: 1px solid rgb(194, 200, 209);">
+                    <input type="text" placeholder="探索稀土掘金" style="width: 300px;">
+                    <button id="header-search-btn"
+                        style="color: rgb(105, 109, 112); background-color: rgb(242, 243, 245);">
+                        <i class="iconfont icon-sousuo"></i>
+                    </button>
+                </form>
+                <!-- 创作者中心 -->
+                <div class="header-creation">
+                    <button id="header-creation-leftBtn">创作者中心</button>
+                    <button id="header-creation-rightBtn" class="iconfont icon-down_s">⯆</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./js/header.js"></script>
+    <!---------顶部导航粘性导航-------->
+    <div class="main-header-nav">
+        <div class="main-header-nav-main">
+            <div class="main-header-nav-main-l">
+                <div><a href="" style="color: #007fff;">综合</a></div>
+                <div><a href="">关注</a></div>
+                <div class="houduan">
+                    <a href="">后端</a>
+                    <div class="ak47">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">Java</a><a href="">Java</a><a href="">Phtyon</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">SpringBoot</a><a href="">数据库</a><a href="">MySQL</a><a href="">面试</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">架构</a><a href="">LeeCode</a><a href="">Redis</a><a href="">大数据</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -175px;">Spring</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">前端</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="qianduan">
+                    <a href="">前端</a>
+                    <div class="ak47 ak47-1">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="anzhuo">
+                    <a href="">安卓</a>
+                    <div class="ak47 ak47-2">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ios">
+                    <a href="">iOS</a>
+                    <div class="ak47 ak47-3">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="rgzn">
+                    <a href="">人工智能</a>
+                    <div class="ak47 ak47-4">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="kfgj">
+                    <a href="">开发工具</a>
+                    <div class="ak47 ak47-5">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dmrs">
+                    <a href="">代码人生</a>
+                    <div class="ak47 ak47-6">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="yuedu">
+                    <a href="">阅读</a>
+                    <div class="ak47 ak47-7">
+                        <div class="tag-list">
+                            <ul>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">前端</a><a href="">JavaScript</a><a href="">Vue.js</a><a
+                                        href="">React.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">CSS</a><a href="">面试</a><a href="">TypeScript</a><a href="">Node.js</a>
+                                </li>
+                                <li style="display: flex; justify-content: space-evenly;">
+                                    <a href="">后端</a><a href="">算法</a><a href="">前端框架</a><a href="">框架</a>
+                                </li>
+                                <li>
+                                    <a href="" style="margin-left: -90px;">Webpack</a><br>
+                                    <div> &nbsp; </div>
+                                    <a href="">微信小程序</a>
+                                    <div> &nbsp; </div>
+                                    <a href="">安卓</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-header-nav-main-r"><a href="" class="qaq">标签管理</a></div>
+        </div>
+    </div>
+    <!--右测广告栏 上面签到--->
+    <div class="advert-top">
+        <div class="advert-top-t">
+            <div><i class="iconfont icon-rili"></i>
+                <span>下午好!</span>
+            </div>
+            <div class="advert-top-qd">去签到</div>
+        </div>
+        <p>点亮你在社区的每一天</p>
+    </div>
+    <!--右测广告栏 ps 高度巨高 固定定位--->
+    <div class="advert">
+        <div class="advert-img1" style="position: relative;">
+            <img src="./img/广告1.png" alt="">
+            <div class="advert-chahao">✖</div>
+            <div class="advert-guanggao">
+                <span class="advert-guanggao-span">投放</span><span style="margin-left: 10px;">广告</span>
+            </div>
+        </div>
+        <div class="advert-img1" style="position: relative;">
+            <img src="./img/广告1.png" alt="">
+            <div class="advert-chahao">✖</div>
+            <div class="advert-guanggao">
+                <span class="advert-guanggao-span">投放</span><span style="margin-left: 10px;">广告</span>
+            </div>
+        </div>
+        <div class="advert-dow">
+            <div><img src="./img/广告3二维码.png" alt=""></div>
+            <div class="advert-dow-txt">
+                <p>下载稀土掘金APP</p>
+                <span>一个帮助开发者成长的社区</span>
+            </div>
+        </div>
+    </div>
+    <!--右测广告栏 下面作者榜--->
+    <div class="author-t"><i class="iconfont icon-jinpai"></i>作者榜</div>
+    <div class="author-b">
+        <div class="author-b-1">
+            <div><img
+                    src="https://p6-passport.byteacctimg.com/img/user-avatar/d9a1a8067eb6f932b29e6482d62741f7~300x300.image"
+                    alt="">
+
+            </div>
+            <div class="author-b-1-1">0o华仔o0
+                <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/lv-4.a78c420.png" alt=""
+                    title="创作等级">
+                <p>前端开发 @ 百应</p>
+            </div>
+        </div>
+        <div class="author-b-1">
+            <div><img
+                    src="https://p3-passport.byteacctimg.com/img/user-avatar/b8b82e41a702943a5442964c471f02e5~300x300.image"
+                    alt="">
+
+            </div>
+            <div class="author-b-1-1">大鸡腿同学
+                <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/lv-4.a78c420.png" alt=""
+                    title="创作等级">
+                <p>Java架构师</p>
+            </div>
+        </div>
+        <div class="author-b-1">
+            <div><img
+                    src="https://p9-passport.byteacctimg.com/img/user-avatar/4e9e751e2b32fb8afbbf559a296ccbf2~300x300.image"
+                    alt="">
+
+            </div>
+            <div class="author-b-1-1">zxg_神说要有光
+                <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/lv-6.b69935b.png" alt=""
+                    title="创作等级">
+                <p>公号「神光的编程秘籍」</p>
+            </div>
+        </div>
+    </div>
+    <div class="author-t author-3" style="cursor: pointer;">完整榜单 &nbsp; ></div>
+    <!--右下角指南 插件 计划-->
+    <div class="play">
+        <ul class="play-ul">
+            <li class="play-ul-li">
+                <a href="" class="play-ul-li-a">
+                    <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/juejin-tutu.d58819c.png"
+                        alt=""> &nbsp;
+                    <span>稀土掘金漫游指南</span>
+                </a>
+            </li>
+            <li class="play-ul-li">
+                <a href="" class="play-ul-li-a">
+                    <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/juejin-extension-icon.4b79fb4.png"
+                        alt=""> &nbsp;
+                    <span>安装掘金浏览器插件</span>
+                </a>
+            </li>
+            <li class="play-ul-li">
+                <a href="" class="play-ul-li-a">
+                    <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/juejin-miner.b78347c.png"
+                        alt=""> &nbsp;
+                    <span>前往掘金翻译计划</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--右下角版权--->
+    <div class="copyright">
+        <div>
+            <a href="">用户协议</a>
+            <a href="">营业执照</a>
+            <a href="">隐私政策</a>
+            <a href="">关于我们</a>
+        </div>
+        <div>
+            <a href="">站点地图</a>
+            <a href="">使用指南</a>
+            <a href="">友情链接</a>
+            <a href="">关更多文章</a>
+        </div>
+        <div><a href="">京ICP备18012699号-3</a></div>
+        <div><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/police.d0289dc.png" alt=""><a
+                href="">京公网安备11010802026719号</a></div>
+        <div><a href="">版权所有：北京北比信息技术有限公司</a></div>
+        <div><a href="">公司地址:北京市海淀区信息路甲28号13层B座13B-5</a></div>
+        <div><a href="">公司座机:010-83434395</a></div>
+        <div><a href="">举报邮箱： feedback@xitu.io</a></div>
+        <div><a href="">©2022 稀土掘金</a></div>
+        <br>
+        <div class="icon-box">
+            <div class=" icon3"><img
+                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/weibo.0cd39f5.png" alt="">
+            </div>&nbsp;
+            <div class="icon">
+                <div class="icon2"><img
+                        src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/wechat.ce329e6.png" alt="">
+
+                </div>
+                <div class="icon-masker">
+                    <div><span>微信扫一扫</span></div>
+                    <div class="icon-masker-vx"><img
+                            src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/juejin-qr.b247fde.jpeg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右下角反馈建议 suspension-panel悬挂板--->
+    <div class="suspension-panel">
+        <button title="回到顶部" class="btn1 to-top-btn">
+            <i class="iconfont icon-tubiao02"></i>
+        </button>
+        <br>
+        <button title="建议反馈" class="btn2 to-top-btn">
+            <i class="iconfont icon-xiaoxi"></i>
+        </button>
+    </div>
+
+    <!--------main------------------>
+    <div class="main">
+        <div class="main-tou">
+            <a href="">推荐</a>
+            <a href="">最新</a>
+            <a href="">热榜</a>
+        </div>
+        <!---------广告1--------->
+
+        <div class="main-gg">
+            <div class="main-gg-top">
+                <div style="display: flex;">
+                    <div class="hoverbule"><a href="">掘金酱</a>&nbsp;&nbsp;</div>
+                    <div><span>&nbsp;&nbsp;17天前</span></div>
+                </div>
+                <div class="main-gg-top-gg">广告</div>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-box-l">
+                <a href="" class="info-box-l-a1">8月更文活动来啦!携手创作，共同成长！</a>
+                <a href="" class="info-box-l-a2">在这个热情的8月,「掘金·日新计划」再次起航,超多创作奖励等你来拿！</a>
+
+            </div>
+            <div class="info-box-r"><img
+                    src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9b40a55342e4dacbd6530b56ee4bb40~tplv-k3u1fbpfcp-no-mark:720:720:720:480.awebp?"
+                    alt=""></div>
+        </div>
+
+        <!-----------模板1---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">Charmve</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;1个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;算法·GitHub</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">有哪些 GitHub 项目的 README 堪称教科书？</a>
+                    <a href="" class="info-box-l-a2">我敢说我的GitHub开源项目,每个README都是十分规范的。 其实做项目是按照整个产品思维来梳理的。
+                        需要在readme中说清楚几件事:
+                        这个项目是什么 跟同类产品/工具有什么独特之处 怎么用，更</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>6.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon"><span
+                                    style="font-size: 13px;">&nbsp;405</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">66</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div>
+        <!-----------模板2---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">满帮打前端</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;10天前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;前端</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">满帮web页面首屏秒开解决之道</a>
+                    <a href=""
+                        class="info-box-l-a2">web项目优化到2s加载成功靠打包优化,缓存陪着,优化到1s靠离线,优化到200ms靠预运行。抽离每个项目公共需要运行的资源提前运行显著提高秒开体验</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>789</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">15</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">评论</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div>
+        <!-----------模板3---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">MacroZheng</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;5个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;后端·Java·Redis</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">颜值爆表!Redis官方可视化工具来啦,功能真心强大!</a>
+                    <a href=""
+                        class="info-box-l-a2">最近逛了一下Redis官方网站,发现Redis不仅推出了很多新特性,而且还发布了一款可视化工具。试用了一下感觉非常不错,最关键的是能支持RedisJSON之类的新特性,推荐给大家!</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>1.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">98</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">57</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"><img
+                        src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47a0e20062d340df9d1a9426d4400d94~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?"
+                        alt=""></div>
+            </div>
+        </div>
+        <!---------广告2--------->
+
+        <div class="main-gg">
+            <div class="main-gg-top">
+                <div style="display: flex;">
+                    <div class="hoverbule"><a href="">榜单小助手</a>&nbsp;&nbsp;</div>
+                    <div><span>&nbsp;&nbsp;3小时前</span></div>
+                </div>
+                <div class="main-gg-top-gg">广告</div>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-box-l">
+                <a href="" class="info-box-l-a1">激励优质创作者,2022掘力计划7月创作者月榜来了!</a>
+                <a href="" class="info-box-l-a2">2022掘力计划7月创作者月榜来了,快来看看有哪些掘友上榜啦!转发本文，还有机会获得掘金热门周边哦~
+                </a>
+
+            </div>
+            <div class="info-box-r"><img
+                    src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/00079c0b952a4486af834974e45c7675~tplv-k3u1fbpfcp-no-mark:720:720:720:480.awebp?"
+                    alt=""></div>
+        </div>
+
+        <!-----------模板1---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">Charmve</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;1个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;算法·GitHub</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">有哪些 GitHub 项目的 README 堪称教科书？</a>
+                    <a href="" class="info-box-l-a2">我敢说我的GitHub开源项目,每个README都是十分规范的。 其实做项目是按照整个产品思维来梳理的。
+                        需要在readme中说清楚几件事:
+                        这个项目是什么 跟同类产品/工具有什么独特之处 怎么用，更</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>6.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">405</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">66</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div>
+        <!-----------模板2---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">满帮打前端</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;10天前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;前端</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">满帮web页面首屏秒开解决之道</a>
+                    <a href=""
+                        class="info-box-l-a2">web项目优化到2s加载成功靠打包优化,缓存陪着,优化到1s靠离线,优化到200ms靠预运行。抽离每个项目公共需要运行的资源提前运行显著提高秒开体验</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>789</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">15</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">评论</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div>
+        <!-----------模板3---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">MacroZheng</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;5个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;后端·Java·Redis</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">颜值爆表!Redis官方可视化工具来啦,功能真心强大!</a>
+                    <a href=""
+                        class="info-box-l-a2">最近逛了一下Redis官方网站,发现Redis不仅推出了很多新特性,而且还发布了一款可视化工具。试用了一下感觉非常不错,最关键的是能支持RedisJSON之类的新特性,推荐给大家!</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>1.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">98</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">57</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"><img
+                        src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47a0e20062d340df9d1a9426d4400d94~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?"
+                        alt=""></div>
+            </div>
+        </div>
+        <!-----------模板4---------------->
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">恋猫de小郭</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;2天前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;Flutter·前端·Android</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">Flutter 实现 “真” 3D 动画效果，用纯代码实现立体 Dash 和 3D 掘金 Logo</a>
+                    <a href="" class="info-box-l-a2">本篇将给你带来更加炫酷动画效果，最后教你如何通过纯代码实现一只立体的 Flutter 的吉祥物 Dash 和 3D 的掘金 logo
+                        动画.</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>3324</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">94</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">23</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"><img
+                        src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e16fb213c48d47749e653970c2dc0eec~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?"
+                        alt=""></div>
+            </div>
+        </div>
+        <!---------广告3--------->
+
+        <div class="main-gg">
+            <div class="main-gg-top">
+                <div style="display: flex;">
+                    <div class="hoverbule"><a href="">j掘金小册</a>&nbsp;&nbsp;</div>
+                    <div><span>&nbsp;&nbsp;3小时前</span></div>
+                </div>
+                <div class="main-gg-top-gg">广告</div>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-box-l">
+                <a href="" class="info-box-l-a1">小册上新｜基于 Vite 的组件库工程化实战</a>
+                <a href="" class="info-box-l-a2">1:1 还原开源前端组件库搭建全过程
+                </a>
+
+            </div>
+            <div class="info-box-r"><img
+                    src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d86f2f1463ce45a5b1f02a6e1e34949e~tplv-k3u1fbpfcp-no-mark:720:720:720:480.awebp?"
+                    alt=""></div>
+        </div>
+
+        <!------------------------------>
+        <div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">Charmve</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;1个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;算法·GitHub</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">有哪些 GitHub 项目的 README 堪称教科书？</a>
+                    <a href="" class="info-box-l-a2">我敢说我的GitHub开源项目,每个README都是十分规范的。 其实做项目是按照整个产品思维来梳理的。
+                        需要在readme中说清楚几件事:
+                        这个项目是什么 跟同类产品/工具有什么独特之处 怎么用，更</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>6.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">405</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">66</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //右下角反馈建议 suspension-panel悬挂板  滚动1000px的时候出现隐藏
+        var btn1 = document.querySelector('.btn1')
+        console.log(btn1);
+        window.addEventListener('scroll', function () {
+            var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            y = Math.ceil(y)
+            if (y >= 1000) {
+                btn1.style.display = 'block'
+            }
+            else {
+                btn1.style.display = 'none'
+            }
+        })
+        //回到顶部
+        btn1.addEventListener('click', function () {
+            var timer = setInterval(function () {
+                if (document.documentElement.scrollTop == 0) {
+                    clearInterval(timer) // 页面垂直滚动距离为0.说明到顶了,清除定时器
+                }
+                document.documentElement.scrollTop = document.documentElement.scrollTop - 20
+            }, 10)
+        })
+        //右侧广告 滚动2000px的时候固定定位
+        var advert = document.querySelector('.advert')
+        console.log(advert);
+        window.addEventListener('scroll', function () {
+            var y1 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            y1 = Math.ceil(y1)
+            if (y1 >= 2000) {
+                advert.classList.add('fixed')
+            }
+            else {
+                advert.classList.remove('fixed')
+            }
+        })
+
+        //导航黏性定位
+        var mainHeaderNav = document.querySelector('.main-header-nav')
+        window.onscroll = function () {
+            var y2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            y2 = Math.ceil(y2)//取整函数
+            console.log(y2);
+            // 当滚动到导航栏的时候，给导航栏设置定位
+            if (y2 >= mainHeaderNav.offsetTop) {
+                mainHeaderNav.style.position = 'fixed'//固定在屏幕上的某个位置，不随屏幕的滚动而消失。
+            } if (y2 <= mainHeaderNav.offsetTop) { mainHeaderNav.style.position = 'relative' }
+        }
+        // 判断滚动到底部
+        var isTrue = true;
+        var num = 0;
+        document.onscroll = function () {
+            if (isTrue) {
+                // 页面卷上去的距离
+                var y3 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                y3 = Math.ceil(y3)
+                // console.log(y + window.innerHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+                // 判断页面到底    卷上去的距离 + 浏览器可视窗口的高  == 页面的实际高时 说明滚动到底了
+                var mianBoxHoover = document.querySelector('.mian-box-hoover')
+                console.log(mianBoxHoover);
+                console.log(document.documentElement.offsetHeight);
+                if (y3 + window.innerHeight + 150 >= document.documentElement.scrollHeight) {
+                    if (num == 100) {
+                        return;//必须写前边
+                    }
+                    console.log('到底了----请求数据，向页面添加元素');
+                    isTrue = false;
+                    // 向页面中添加元素
+                    var div = document.createElement('div')
+                    div.innerHTML = `<div class="bug"><div class="mian-box-hoover">
+            <div class="chahao">✖
+                <div class="chahao-box">
+                    <ul>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/d51cb68873fed0eefbe66dd4323b5590.svg"
+                                alt="">不感兴趣</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/bc11676ce6e57f9b6a31638cd903e3f7.svg"
+                                alt="">屏蔽作者</li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/ee8bcf878773b9f4ed2fce9b786c455f.svg"
+                                alt=""> 屏蔽标签 <span><img
+                                    src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/806fb5956ad7e61948539f496097b0b1.svg"
+                                    alt=""></span> </li>
+                        <li><img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/8039766ff47103b8c50b5cb4becf77d4.svg"
+                                alt="">举报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-gg">
+                <div class="main-gg-top">
+                    <div style="display: flex;">
+                        <div class="hoverbule"><a href="">Charmve</a>&nbsp;&nbsp;</div>
+                        <div><span>&nbsp;&nbsp;1个月前&nbsp;&nbsp;</span></div>
+                        <div class="hoverbule"><span>&nbsp;&nbsp;算法·GitHub</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-l">
+                    <a href="" class="info-box-l-a1">有哪些 GitHub 项目的 README 堪称教科书？</a>
+                    <a href="" class="info-box-l-a2">我敢说我的GitHub开源项目,每个README都是十分规范的。 其实做项目是按照整个产品思维来梳理的。
+                        需要在readme中说清楚几件事:
+                        这个项目是什么 跟同类产品/工具有什么独特之处 怎么用，更</a>
+                    <ul class="info-box-l-ul">
+                        <li><i class="iconfont icon-xianshikejian"></i>&nbsp;<span>6.9w</span></li>
+                        <li class="hoverbule"><i class="iconfont icon-icon">&nbsp;<span
+                                    style="font-size: 13px;">405</span></i></li>
+                        <li class="hoverbule"><i class="iconfont icon-shouye1">&nbsp;<span
+                                    style="font-size: 13px;">66</span></i></li>
+                    </ul>
+                </div>
+                <div class="info-box-r"></div>
+            </div>
+        </div></div>`
+                    document.body.appendChild(div)
+                    num++;
+                    // 
+                    isTrue = true;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
